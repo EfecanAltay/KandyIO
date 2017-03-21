@@ -95,8 +95,6 @@ string HttpClient::PostToURL(string url,string data){
 		
 		res = curl_easy_perform(curl);
 		
-		cout << resData << endl;
-		
 		return resData;
 		
 		if(res != CURLE_OK){

@@ -45,7 +45,7 @@ void KandyClient::CreateDomain(string DomainName,string ProjectName){
 		cout << data << endl;
 		string resData = httpClient.PostToURL(url,data);
 		cout <<"help"<< endl;
-		//cout << resData << endl;
+		cout << resData << endl;
 		//domainLists.push_back(resData);
 	}
 }
