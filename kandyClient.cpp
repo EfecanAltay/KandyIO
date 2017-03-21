@@ -1,13 +1,13 @@
-#include "kendyClient.h"
+#include "kandyClient.h"
 
 
-KendyClient::KendyClient(string _apiKey,string _apiSecretKey){
+KandyClient::KandyClient(string _apiKey,string _apiSecretKey){
 	apiUrl = "https://api.kandy.io/v1.2/";
 	apiKey = _apiKey;
 	apiSecretKey = _apiSecretKey; 
 	httpClient.HttpInit();
 }
-void KendyClient::Connect(){
+void KandyClient::Connect(){
 	printf("\nConnect the Kandy with token \n");
 	jsonData jdata = httpClient.GetJsonToURL("https://api.kandy.io/v1.2/accounts/accesstokens?key="+apiKey+"&account_api_secret=" + apiSecretKey);
 	if(jdata["status"].asUInt() == 0)
@@ -20,7 +20,7 @@ void KendyClient::Connect(){
 		cerr << "connection err" << endl;
 	}
 }
-void KendyClient::Disconnect(){
+void KandyClient::Disconnect(){
 	if(accessToken != ""){
 		printf("\nDisconnect the Kandy with token \n");
 		string url = apiUrl+"accounts/accesstokens?key="+apiKey+"&account_api_secret=" + apiSecretKey + "&account_access_token="+accessToken;
@@ -35,18 +35,21 @@ void KendyClient::Disconnect(){
 		}
 	}
 }
-void KendyClient::CreateDomain(string DomainName,string ProjuctName){
+void KandyClient::CreateDomain(string DomainName,string ProjectName){
 	if(accessToken != ""){
+		//httpClient.AddToHeader("Accept: application/json");
+		httpClient.AddToHeader("Content-Type: application/json");
 		printf("\nCreating Domain... \n");
 		string url = apiUrl+"accounts/domains?key="+accessToken;
-		string data = "{'domain_name':'" + DomainName + "','projuct_name':'" +ProjuctName+ "'}";
+		string data = "{'domain_name':'" + DomainName + "','project_name':'" +ProjectName+ "'}";
 		cout << data << endl;
 		string resData = httpClient.PostToURL(url,data);
-		cout << resData << endl;
+		cout <<"help"<< endl;
+		//cout << resData << endl;
 		//domainLists.push_back(resData);
 	}
 }
-void KendyClient:: DeleteDomain(string DomainKey){
+void KandyClient:: DeleteDomain(string DomainKey){
 	if(accessToken != ""){
 		printf("\nDeleting Domain... \n");
 		domainLists.remove(DomainKey);
@@ -54,7 +57,7 @@ void KendyClient:: DeleteDomain(string DomainKey){
 		jsonData resData = httpClient.GetJsonToURL(url);
 	}
 }
-string KendyClient::GetListDomains(){
+string KandyClient::GetListDomains(){
 	if(accessToken != ""){
 		printf("\nlists Domain : \n");
 		string url = apiUrl+"accounts/domains?key="+accessToken;

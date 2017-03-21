@@ -1,3 +1,3 @@
-/home/pi/KandyIO/CMakeFiles/edit_cache.dir
 /home/pi/KandyIO/CMakeFiles/rebuild_cache.dir
-/home/pi/KandyIO/CMakeFiles/KendyClient.dir
+/home/pi/KandyIO/CMakeFiles/edit_cache.dir
+/home/pi/KandyIO/CMakeFiles/KandyClient.dir

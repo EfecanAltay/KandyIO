@@ -1,14 +1,14 @@
-#ifndef _KendyClient_H_INCLUDED_
-#define _KendyClient_H_INCLUDED_
+#ifndef _KandyClient_H_INCLUDED_
+#define _KandyClient_H_INCLUDED_
 
 #include<list>
 #include "httpClient.h"
 
 
-class KendyClient{
+class KandyClient{
 	public:
 		HttpClient httpClient;
-		KendyClient(string,string);
+		KandyClient(string,string);
 		//account
 		void Connect(void);
 		void Disconnect(void);

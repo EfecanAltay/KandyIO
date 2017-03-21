@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/pi/KandyIO
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named KendyClient
+# Target rules for targets named KandyClient
 
 # Build rule for target.
-KendyClient: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 KendyClient
-.PHONY : KendyClient
+KandyClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 KandyClient
+.PHONY : KandyClient
 
 # fast build rule for target.
-KendyClient/fast:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/build
-.PHONY : KendyClient/fast
+KandyClient/fast:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/build
+.PHONY : KandyClient/fast
 
 httpClient.o: httpClient.cpp.o
 
@@ -129,7 +129,7 @@ httpClient.o: httpClient.cpp.o
 
 # target to build an object file
 httpClient.cpp.o:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/httpClient.cpp.o
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/httpClient.cpp.o
 .PHONY : httpClient.cpp.o
 
 httpClient.i: httpClient.cpp.i
@@ -138,7 +138,7 @@ httpClient.i: httpClient.cpp.i
 
 # target to preprocess a source file
 httpClient.cpp.i:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/httpClient.cpp.i
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/httpClient.cpp.i
 .PHONY : httpClient.cpp.i
 
 httpClient.s: httpClient.cpp.s
@@ -147,35 +147,35 @@ httpClient.s: httpClient.cpp.s
 
 # target to generate assembly for a file
 httpClient.cpp.s:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/httpClient.cpp.s
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/httpClient.cpp.s
 .PHONY : httpClient.cpp.s
 
-kendyClient.o: kendyClient.cpp.o
+kandyClient.o: kandyClient.cpp.o
 
-.PHONY : kendyClient.o
+.PHONY : kandyClient.o
 
 # target to build an object file
-kendyClient.cpp.o:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/kendyClient.cpp.o
-.PHONY : kendyClient.cpp.o
+kandyClient.cpp.o:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.o
+.PHONY : kandyClient.cpp.o
 
-kendyClient.i: kendyClient.cpp.i
+kandyClient.i: kandyClient.cpp.i
 
-.PHONY : kendyClient.i
+.PHONY : kandyClient.i
 
 # target to preprocess a source file
-kendyClient.cpp.i:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/kendyClient.cpp.i
-.PHONY : kendyClient.cpp.i
+kandyClient.cpp.i:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.i
+.PHONY : kandyClient.cpp.i
 
-kendyClient.s: kendyClient.cpp.s
+kandyClient.s: kandyClient.cpp.s
 
-.PHONY : kendyClient.s
+.PHONY : kandyClient.s
 
 # target to generate assembly for a file
-kendyClient.cpp.s:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/kendyClient.cpp.s
-.PHONY : kendyClient.cpp.s
+kandyClient.cpp.s:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.s
+.PHONY : kandyClient.cpp.s
 
 main.o: main.cpp.o
 
@@ -183,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -210,15 +210,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... KendyClient"
+	@echo "... edit_cache"
+	@echo "... KandyClient"
 	@echo "... httpClient.o"
 	@echo "... httpClient.i"
 	@echo "... httpClient.s"
-	@echo "... kendyClient.o"
-	@echo "... kendyClient.i"
-	@echo "... kendyClient.s"
+	@echo "... kandyClient.o"
+	@echo "... kandyClient.i"
+	@echo "... kandyClient.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

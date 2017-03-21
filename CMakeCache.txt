@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=KendyClient
+CMAKE_PROJECT_NAME:STATIC=KandyClient
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -172,10 +172,10 @@ CURL_INCLUDE_DIR:PATH=/usr/include
 CURL_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libcurl.so
 
 //Value Computed by CMake
-KendyClient_BINARY_DIR:STATIC=/home/pi/KandyIO
+KandyClient_BINARY_DIR:STATIC=/home/pi/KandyIO
 
 //Value Computed by CMake
-KendyClient_SOURCE_DIR:STATIC=/home/pi/KandyIO
+KandyClient_SOURCE_DIR:STATIC=/home/pi/KandyIO
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config

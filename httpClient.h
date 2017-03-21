@@ -19,7 +19,7 @@ class HttpClient{
 		void AddToHeader(string);
 		string GetToURL(string);
 		jsonData GetJsonToURL(string);
-		jsonData PostToURL(string,jsonData);
+		jsonData PostJsonToURL(string,jsonData);
 		string PostToURL(string,string);
 		jsonData StringToJson(string);
 		string JsonToString(jsonData);

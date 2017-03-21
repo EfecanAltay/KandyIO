@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/pi/KandyIO
 CMAKE_BINARY_DIR = /home/pi/KandyIO
 
 #=============================================================================
-# Target rules for target CMakeFiles/KendyClient.dir
+# Target rules for target CMakeFiles/KandyClient.dir
 
 # All Build rule for target.
-CMakeFiles/KendyClient.dir/all:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/depend
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=1,2,3,4 "Built target KendyClient"
-.PHONY : CMakeFiles/KendyClient.dir/all
+CMakeFiles/KandyClient.dir/all:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/depend
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=1,2,3,4 "Built target KandyClient"
+.PHONY : CMakeFiles/KandyClient.dir/all
 
 # Include target in all.
-all: CMakeFiles/KendyClient.dir/all
+all: CMakeFiles/KandyClient.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/KendyClient.dir/rule: cmake_check_build_system
+CMakeFiles/KandyClient.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/KandyIO/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KendyClient.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/KandyClient.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/KandyIO/CMakeFiles 0
-.PHONY : CMakeFiles/KendyClient.dir/rule
+.PHONY : CMakeFiles/KandyClient.dir/rule
 
 # Convenience name for target.
-KendyClient: CMakeFiles/KendyClient.dir/rule
+KandyClient: CMakeFiles/KandyClient.dir/rule
 
-.PHONY : KendyClient
-
-# clean rule for target.
-CMakeFiles/KendyClient.dir/clean:
-	$(MAKE) -f CMakeFiles/KendyClient.dir/build.make CMakeFiles/KendyClient.dir/clean
-.PHONY : CMakeFiles/KendyClient.dir/clean
+.PHONY : KandyClient
 
 # clean rule for target.
-clean: CMakeFiles/KendyClient.dir/clean
+CMakeFiles/KandyClient.dir/clean:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/clean
+.PHONY : CMakeFiles/KandyClient.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/KandyClient.dir/clean
 
 .PHONY : clean
 

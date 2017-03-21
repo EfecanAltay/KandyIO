@@ -82,9 +82,12 @@ jsonData HttpClient::GetJsonToURL(string url){
 string HttpClient::PostToURL(string url,string data){
 	if(curl) {
 		
+		curl_easy_setopt(curl, CURLOPT_HTTPHEADER,chunk);
 		curl_easy_setopt(curl, CURLOPT_URL,url.c_str());
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE,(long)data.length());
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
+		
+		//curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
 		
 		string resData ="";
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
@@ -92,7 +95,10 @@ string HttpClient::PostToURL(string url,string data){
 		
 		res = curl_easy_perform(curl);
 		
+		cout << resData << endl;
+		
 		return resData;
+		
 		if(res != CURLE_OK){
 			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
 			curl_easy_cleanup(curl);
@@ -104,10 +110,11 @@ string HttpClient::PostToURL(string url,string data){
 		
 	}
 }
-jsonData HttpClient::PostToURL(string url,jsonData data){
+jsonData HttpClient::PostJsonToURL(string url,jsonData data){
 	if(curl) {
 		string s_data = JsonToString(data);
 		
+		curl_easy_setopt(curl, CURLOPT_HTTPHEADER,chunk);
 		curl_easy_setopt(curl, CURLOPT_URL,url.c_str());
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE,(long)s_data.length());
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, s_data.c_str());

@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/KandyClient.dir/httpClient.cpp.o CMakeFiles/KandyClient.dir/kandyClient.cpp.o CMakeFiles/KandyClient.dir/main.cpp.o  -o KandyClient -rdynamic -ljsoncpp -lcurl -ljsoncpp -lcurl 

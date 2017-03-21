@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/KendyClient.dir/httpClient.cpp.o CMakeFiles/KendyClient.dir/kendyClient.cpp.o CMakeFiles/KendyClient.dir/main.cpp.o  -o KendyClient -rdynamic -ljsoncpp -lcurl -ljsoncpp -lcurl 
