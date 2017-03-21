@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/KandyIO/httpClient.cpp
+httpClient.h
+/home/pi/KandyIO/httpClient.h
+
+/home/pi/KandyIO/httpClient.h
+stdio.h
+-
+iostream
+-
+string
+-
+cstring
+-
+curl/curl.h
+-
+jsoncpp/json/json.h
+-
+
+/home/pi/KandyIO/kendyClient.cpp
+kendyClient.h
+/home/pi/KandyIO/kendyClient.h
+
+/home/pi/KandyIO/kendyClient.h
+list
+-
+httpClient.h
+/home/pi/KandyIO/httpClient.h
+
+/home/pi/KandyIO/main.cpp
+kendyClient.h
+/home/pi/KandyIO/kendyClient.h
+
