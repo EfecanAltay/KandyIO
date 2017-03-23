@@ -38,9 +38,8 @@ string HttpClient::GetToURL(string url){
 		
 		res = curl_easy_perform(curl);
 		
-		return resData;
-		
 		if(res != CURLE_OK){
+			fprintf(stderr, "curl_easy_perform() connection error\n");
 			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
 			curl_easy_cleanup(curl);
 			curl_global_cleanup();
@@ -49,7 +48,7 @@ string HttpClient::GetToURL(string url){
 		
 		curl_easy_cleanup(curl);
 		curl_global_cleanup();
-		
+		return resData;
 	}
 	return 0;
 }
@@ -65,16 +64,18 @@ jsonData HttpClient::GetJsonToURL(string url){
 		
 		res = curl_easy_perform(curl);
 		
-		return StringToJson(resData);
-		 
+		 return StringToJson(resData);
 		if(res != CURLE_OK){
+			fprintf(stderr, "curl_easy_perform() connection error\n");
 			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
 			curl_easy_cleanup(curl);
 			curl_global_cleanup();
 			return 0;
+		}else{
+			curl_easy_cleanup(curl);
+			curl_global_cleanup();	
+			
 		}
-		curl_easy_cleanup(curl);
-		curl_global_cleanup();
 		
 		
 	}
@@ -83,19 +84,26 @@ string HttpClient::PostToURL(string url,string data){
 	if(curl) {
 		
 		curl_easy_setopt(curl, CURLOPT_HTTPHEADER,chunk);
+		//curl_easy_setopt(curl, CURLOPT_HEADER, 0L);
 		curl_easy_setopt(curl, CURLOPT_URL,url.c_str());
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE,(long)data.length());
 		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
-		
+		//curl_easy_setopt(curl, CURLOPT_POST, 1);
 		//curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
 		
-		string resData ="";
+		string resData ;
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &resData);
 		
-		res = curl_easy_perform(curl);
+		//string resData = JsonToString(resData);
+		cout << resData << endl; 
 		
-		return resData;
+		res = curl_easy_perform(curl);
+		jsonData jdata = StringToJson(resData);
+		
+		
+		
+		//string resData = JsonToString(jresData);
 		
 		if(res != CURLE_OK){
 			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
@@ -103,8 +111,10 @@ string HttpClient::PostToURL(string url,string data){
 			curl_global_cleanup();
 			return 0;
 		}
+		
 		curl_easy_cleanup(curl);
 		curl_global_cleanup();
+		return resData;
 		
 	}
 }

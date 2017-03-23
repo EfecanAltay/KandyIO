@@ -8,7 +8,6 @@ int main(){
 	kandyClient.Connect();
 	//kendyClient.Disconnect();
 	
-	kandyClient.CreateDomain("test.com","test domain for my account");
-	
+	kandyClient.CreateDomain("efecanaltay.com","test domain for my account");
 	return 0;
 }
