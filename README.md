@@ -1,6 +1,6 @@
 # Requirements for Cpp
 
-sudo apt-get install cmake
+apt-get install libcurl4-openssl-dev
 
 sudo apt-get install libcurl
 
