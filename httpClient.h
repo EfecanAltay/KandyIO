@@ -23,6 +23,8 @@ class HttpClient{
 		string PostToURL(string,string);
 		jsonData StringToJson(string);
 		string JsonToString(jsonData);
+		string GetDeleteToURL(string);
+		jsonData GetDeleteJsonToURL(string);
 		
 	private:
 		CURL *curl;		//Httpnin temelidir.

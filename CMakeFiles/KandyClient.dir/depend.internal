@@ -4,11 +4,17 @@
 CMakeFiles/KandyClient.dir/httpClient.cpp.o
  /home/pi/KandyIO/httpClient.cpp
  /home/pi/KandyIO/httpClient.h
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o
  /home/pi/KandyIO/httpClient.h
- /home/pi/KandyIO/kandyClient.cpp
- /home/pi/KandyIO/kandyClient.h
+ /home/pi/KandyIO/kandyAccount.cpp
+ /home/pi/KandyIO/kandyAccount.h
+ /home/pi/KandyIO/kandyDomain.h
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o
+ /home/pi/KandyIO/httpClient.h
+ /home/pi/KandyIO/kandyDomain.cpp
+ /home/pi/KandyIO/kandyDomain.h
 CMakeFiles/KandyClient.dir/main.cpp.o
  /home/pi/KandyIO/httpClient.h
- /home/pi/KandyIO/kandyClient.h
+ /home/pi/KandyIO/kandyAccount.h
+ /home/pi/KandyIO/kandyDomain.h
  /home/pi/KandyIO/main.cpp

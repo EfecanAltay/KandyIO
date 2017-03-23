@@ -5,7 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/KandyIO/httpClient.cpp" "/home/pi/KandyIO/CMakeFiles/KandyClient.dir/httpClient.cpp.o"
-  "/home/pi/KandyIO/kandyClient.cpp" "/home/pi/KandyIO/CMakeFiles/KandyClient.dir/kandyClient.cpp.o"
+  "/home/pi/KandyIO/kandyAccount.cpp" "/home/pi/KandyIO/CMakeFiles/KandyClient.dir/kandyAccount.cpp.o"
+  "/home/pi/KandyIO/kandyDomain.cpp" "/home/pi/KandyIO/CMakeFiles/KandyClient.dir/kandyDomain.cpp.o"
   "/home/pi/KandyIO/main.cpp" "/home/pi/KandyIO/CMakeFiles/KandyClient.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

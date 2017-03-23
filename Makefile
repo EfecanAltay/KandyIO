@@ -150,32 +150,59 @@ httpClient.cpp.s:
 	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/httpClient.cpp.s
 .PHONY : httpClient.cpp.s
 
-kandyClient.o: kandyClient.cpp.o
+kandyAccount.o: kandyAccount.cpp.o
 
-.PHONY : kandyClient.o
+.PHONY : kandyAccount.o
 
 # target to build an object file
-kandyClient.cpp.o:
-	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.o
-.PHONY : kandyClient.cpp.o
+kandyAccount.cpp.o:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyAccount.cpp.o
+.PHONY : kandyAccount.cpp.o
 
-kandyClient.i: kandyClient.cpp.i
+kandyAccount.i: kandyAccount.cpp.i
 
-.PHONY : kandyClient.i
+.PHONY : kandyAccount.i
 
 # target to preprocess a source file
-kandyClient.cpp.i:
-	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.i
-.PHONY : kandyClient.cpp.i
+kandyAccount.cpp.i:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyAccount.cpp.i
+.PHONY : kandyAccount.cpp.i
 
-kandyClient.s: kandyClient.cpp.s
+kandyAccount.s: kandyAccount.cpp.s
 
-.PHONY : kandyClient.s
+.PHONY : kandyAccount.s
 
 # target to generate assembly for a file
-kandyClient.cpp.s:
-	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.s
-.PHONY : kandyClient.cpp.s
+kandyAccount.cpp.s:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyAccount.cpp.s
+.PHONY : kandyAccount.cpp.s
+
+kandyDomain.o: kandyDomain.cpp.o
+
+.PHONY : kandyDomain.o
+
+# target to build an object file
+kandyDomain.cpp.o:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyDomain.cpp.o
+.PHONY : kandyDomain.cpp.o
+
+kandyDomain.i: kandyDomain.cpp.i
+
+.PHONY : kandyDomain.i
+
+# target to preprocess a source file
+kandyDomain.cpp.i:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyDomain.cpp.i
+.PHONY : kandyDomain.cpp.i
+
+kandyDomain.s: kandyDomain.cpp.s
+
+.PHONY : kandyDomain.s
+
+# target to generate assembly for a file
+kandyDomain.cpp.s:
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyDomain.cpp.s
+.PHONY : kandyDomain.cpp.s
 
 main.o: main.cpp.o
 
@@ -216,9 +243,12 @@ help:
 	@echo "... httpClient.o"
 	@echo "... httpClient.i"
 	@echo "... httpClient.s"
-	@echo "... kandyClient.o"
-	@echo "... kandyClient.i"
-	@echo "... kandyClient.s"
+	@echo "... kandyAccount.o"
+	@echo "... kandyAccount.i"
+	@echo "... kandyAccount.s"
+	@echo "... kandyDomain.o"
+	@echo "... kandyDomain.i"
+	@echo "... kandyDomain.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

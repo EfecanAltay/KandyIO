@@ -81,33 +81,57 @@ CMakeFiles/KandyClient.dir/httpClient.cpp.o.provides: CMakeFiles/KandyClient.dir
 CMakeFiles/KandyClient.dir/httpClient.cpp.o.provides.build: CMakeFiles/KandyClient.dir/httpClient.cpp.o
 
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o: CMakeFiles/KandyClient.dir/flags.make
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o: kandyClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KandyClient.dir/kandyClient.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KandyClient.dir/kandyClient.cpp.o -c /home/pi/KandyIO/kandyClient.cpp
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o: CMakeFiles/KandyClient.dir/flags.make
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o: kandyAccount.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/KandyClient.dir/kandyAccount.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KandyClient.dir/kandyAccount.cpp.o -c /home/pi/KandyIO/kandyAccount.cpp
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KandyClient.dir/kandyClient.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/KandyIO/kandyClient.cpp > CMakeFiles/KandyClient.dir/kandyClient.cpp.i
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KandyClient.dir/kandyAccount.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/KandyIO/kandyAccount.cpp > CMakeFiles/KandyClient.dir/kandyAccount.cpp.i
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KandyClient.dir/kandyClient.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/KandyIO/kandyClient.cpp -o CMakeFiles/KandyClient.dir/kandyClient.cpp.s
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KandyClient.dir/kandyAccount.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/KandyIO/kandyAccount.cpp -o CMakeFiles/KandyClient.dir/kandyAccount.cpp.s
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o.requires:
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.requires:
 
-.PHONY : CMakeFiles/KandyClient.dir/kandyClient.cpp.o.requires
+.PHONY : CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.requires
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o.provides: CMakeFiles/KandyClient.dir/kandyClient.cpp.o.requires
-	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyClient.cpp.o.provides.build
-.PHONY : CMakeFiles/KandyClient.dir/kandyClient.cpp.o.provides
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.provides: CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.requires
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.provides.build
+.PHONY : CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.provides
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o.provides.build: CMakeFiles/KandyClient.dir/kandyClient.cpp.o
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.provides.build: CMakeFiles/KandyClient.dir/kandyAccount.cpp.o
+
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o: CMakeFiles/KandyClient.dir/flags.make
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o: kandyDomain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KandyClient.dir/kandyDomain.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KandyClient.dir/kandyDomain.cpp.o -c /home/pi/KandyIO/kandyDomain.cpp
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/KandyClient.dir/kandyDomain.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/KandyIO/kandyDomain.cpp > CMakeFiles/KandyClient.dir/kandyDomain.cpp.i
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/KandyClient.dir/kandyDomain.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/KandyIO/kandyDomain.cpp -o CMakeFiles/KandyClient.dir/kandyDomain.cpp.s
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.requires:
+
+.PHONY : CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.requires
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.provides: CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.requires
+	$(MAKE) -f CMakeFiles/KandyClient.dir/build.make CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.provides.build
+.PHONY : CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.provides
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.provides.build: CMakeFiles/KandyClient.dir/kandyDomain.cpp.o
 
 
 CMakeFiles/KandyClient.dir/main.cpp.o: CMakeFiles/KandyClient.dir/flags.make
 CMakeFiles/KandyClient.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/KandyClient.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/KandyClient.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/KandyClient.dir/main.cpp.o -c /home/pi/KandyIO/main.cpp
 
 CMakeFiles/KandyClient.dir/main.cpp.i: cmake_force
@@ -132,20 +156,22 @@ CMakeFiles/KandyClient.dir/main.cpp.o.provides.build: CMakeFiles/KandyClient.dir
 # Object files for target KandyClient
 KandyClient_OBJECTS = \
 "CMakeFiles/KandyClient.dir/httpClient.cpp.o" \
-"CMakeFiles/KandyClient.dir/kandyClient.cpp.o" \
+"CMakeFiles/KandyClient.dir/kandyAccount.cpp.o" \
+"CMakeFiles/KandyClient.dir/kandyDomain.cpp.o" \
 "CMakeFiles/KandyClient.dir/main.cpp.o"
 
 # External object files for target KandyClient
 KandyClient_EXTERNAL_OBJECTS =
 
 KandyClient: CMakeFiles/KandyClient.dir/httpClient.cpp.o
-KandyClient: CMakeFiles/KandyClient.dir/kandyClient.cpp.o
+KandyClient: CMakeFiles/KandyClient.dir/kandyAccount.cpp.o
+KandyClient: CMakeFiles/KandyClient.dir/kandyDomain.cpp.o
 KandyClient: CMakeFiles/KandyClient.dir/main.cpp.o
 KandyClient: CMakeFiles/KandyClient.dir/build.make
 KandyClient: /usr/lib/arm-linux-gnueabihf/libcurl.so
 KandyClient: /usr/lib/arm-linux-gnueabihf/libcurl.so
 KandyClient: CMakeFiles/KandyClient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable KandyClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/KandyIO/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable KandyClient"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/KandyClient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,7 +180,8 @@ CMakeFiles/KandyClient.dir/build: KandyClient
 .PHONY : CMakeFiles/KandyClient.dir/build
 
 CMakeFiles/KandyClient.dir/requires: CMakeFiles/KandyClient.dir/httpClient.cpp.o.requires
-CMakeFiles/KandyClient.dir/requires: CMakeFiles/KandyClient.dir/kandyClient.cpp.o.requires
+CMakeFiles/KandyClient.dir/requires: CMakeFiles/KandyClient.dir/kandyAccount.cpp.o.requires
+CMakeFiles/KandyClient.dir/requires: CMakeFiles/KandyClient.dir/kandyDomain.cpp.o.requires
 CMakeFiles/KandyClient.dir/requires: CMakeFiles/KandyClient.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/KandyClient.dir/requires

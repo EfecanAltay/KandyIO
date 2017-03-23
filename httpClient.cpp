@@ -52,6 +52,60 @@ string HttpClient::GetToURL(string url){
 	}
 	return 0;
 }
+string HttpClient::GetDeleteToURL(string url){
+	if(curl) {
+		
+		curl_easy_setopt(curl,CURLOPT_CUSTOMREQUEST,"DELETE");
+		curl_easy_setopt(curl, CURLOPT_HTTPHEADER,chunk);
+		curl_easy_setopt(curl, CURLOPT_URL,url.c_str());
+		
+		string resData;
+		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &resData);
+		
+		res = curl_easy_perform(curl);
+		
+		if(res != CURLE_OK){
+			fprintf(stderr, "curl_easy_perform() connection error\n");
+			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
+			curl_easy_cleanup(curl);
+			curl_global_cleanup();
+			return 0;
+		}
+		
+		curl_easy_cleanup(curl);
+		curl_global_cleanup();
+		return resData;
+	}
+	return 0;
+}
+jsonData HttpClient::GetDeleteJsonToURL(string url){
+	if(curl) {
+		
+		curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "DELETE");
+		curl_easy_setopt(curl, CURLOPT_HTTPHEADER,chunk);
+		curl_easy_setopt(curl, CURLOPT_URL,url.c_str());
+		
+		string resData;
+		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &resData);
+		
+		res = curl_easy_perform(curl);
+		
+		if(res != CURLE_OK){
+			fprintf(stderr, "curl_easy_perform() connection error\n");
+			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
+			curl_easy_cleanup(curl);
+			curl_global_cleanup();
+			return 0;
+		}
+		
+		curl_easy_cleanup(curl);
+		curl_global_cleanup();
+		return StringToJson(resData);
+	}
+	return 0;
+}
 jsonData HttpClient::GetJsonToURL(string url){
 	if(curl) {
 		
@@ -61,12 +115,10 @@ jsonData HttpClient::GetJsonToURL(string url){
 		string resData ="";
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &resData);
-		
+		cout << resData << endl;
 		res = curl_easy_perform(curl);
 		
-		 return StringToJson(resData);
 		if(res != CURLE_OK){
-			fprintf(stderr, "curl_easy_perform() connection error\n");
 			fprintf(stderr, "curl_easy_perform() failed: %s\n",curl_easy_strerror(res));
 			curl_easy_cleanup(curl);
 			curl_global_cleanup();
@@ -74,7 +126,7 @@ jsonData HttpClient::GetJsonToURL(string url){
 		}else{
 			curl_easy_cleanup(curl);
 			curl_global_cleanup();	
-			
+			return StringToJson(resData);
 		}
 		
 		
@@ -118,6 +170,7 @@ string HttpClient::PostToURL(string url,string data){
 		
 	}
 }
+
 jsonData HttpClient::PostJsonToURL(string url,jsonData data){
 	if(curl) {
 		string s_data = JsonToString(data);
@@ -130,7 +183,7 @@ jsonData HttpClient::PostJsonToURL(string url,jsonData data){
 		string resData ="";
 		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
 		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &resData);
-	
+		
 		res = curl_easy_perform(curl);
 		
 		return StringToJson(resData);

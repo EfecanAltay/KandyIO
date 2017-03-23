@@ -1,13 +1,13 @@
-#include "kandyClient.h"
+#include "kandyAccount.h"
 
 
-KandyClient::KandyClient(string _apiKey,string _apiSecretKey){
+KandyAccount::KandyAccount(string _apiKey,string _apiSecretKey){
 	apiUrl = "https://api.kandy.io/v1.2/";
 	apiKey = _apiKey;
 	apiSecretKey = _apiSecretKey; 
 	httpClient.HttpInit();
 }
-void KandyClient::Connect(){
+void KandyAccount::Connect(){
 	printf("\nConnect the Kandy with token \n");
 	jsonData jdata = httpClient.GetJsonToURL("https://api.kandy.io/v1.2/accounts/accesstokens?key="+apiKey+"&account_api_secret=" + apiSecretKey);
 	cout << httpClient.JsonToString(jdata) << endl;
@@ -22,11 +22,12 @@ void KandyClient::Connect(){
 		cerr << "connection err" << endl;
 	}
 }
-void KandyClient::Disconnect(){
+void KandyAccount::Disconnect(){
 	if(accessToken != ""){
 		printf("\nDisconnect the Kandy with token \n");
 		string url = apiUrl+"accounts/accesstokens?key="+apiKey+"&account_api_secret=" + apiSecretKey + "&account_access_token="+accessToken;
-		jsonData jdata = httpClient.GetJsonToURL(url);
+		jsonData jdata = httpClient.GetDeleteJsonToURL(url);
+		
 		if(jdata["status"].asUInt() == 0)
 		{
 			cout << "\ndisconnecting success:Token deleted" << endl;
@@ -37,7 +38,7 @@ void KandyClient::Disconnect(){
 		}
 	}
 }
-void KandyClient::CreateDomain(string DomainName,string ProjectName){
+void KandyAccount::CreateDomain(string DomainName,string ProjectName){
 	if(accessToken != ""){
 		httpClient.AddToHeader("Content-Type: application/json;");
 		printf("\nCreating Domain... \n");
@@ -51,23 +52,25 @@ void KandyClient::CreateDomain(string DomainName,string ProjectName){
 		jsonData jresData = httpClient.StringToJson(resData);
 		cout << "resMessage : "<<jresData["message"].asString() << endl;
 		int status = jresData["status"].asInt();
+		
 		if(status == 2001){
 			cout<<"!! please sending different DomainName" << endl; 
 		}
 		else if(status == 0){
-		 domainLists.push_back(resData);
+			domain = KandyDomain(DomainName,ProjectName);
+			domain.setDomainApi(jresData["result"]["domain_api_key"].asString(),jresData["result"]["domain_api_secret"].asString());
+		
 		}
 	}
 }
-void KandyClient:: DeleteDomain(string DomainKey){
+void KandyAccount:: DeleteDomain(string DomainKey){
 	if(accessToken != ""){
 		printf("\nDeleting Domain... \n");
-		domainLists.remove(DomainKey);
 		string url = apiUrl+"accounts/domains?key="+accessToken+"&domain_api_key="+DomainKey;
 		jsonData resData = httpClient.GetJsonToURL(url);
 	}
 }
-string KandyClient::GetListDomains(){
+string KandyAccount::GetListDomains(){
 	if(accessToken != ""){
 		printf("\nlists Domain : \n");
 		string url = apiUrl+"accounts/domains?key="+accessToken;
@@ -80,3 +83,6 @@ string KandyClient::GetListDomains(){
 		}
 	}
 }
+
+
+

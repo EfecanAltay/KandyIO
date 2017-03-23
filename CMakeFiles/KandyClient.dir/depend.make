@@ -4,11 +4,17 @@
 CMakeFiles/KandyClient.dir/httpClient.cpp.o: httpClient.cpp
 CMakeFiles/KandyClient.dir/httpClient.cpp.o: httpClient.h
 
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o: httpClient.h
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o: kandyClient.cpp
-CMakeFiles/KandyClient.dir/kandyClient.cpp.o: kandyClient.h
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o: httpClient.h
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o: kandyAccount.cpp
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o: kandyAccount.h
+CMakeFiles/KandyClient.dir/kandyAccount.cpp.o: kandyDomain.h
+
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o: httpClient.h
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o: kandyDomain.cpp
+CMakeFiles/KandyClient.dir/kandyDomain.cpp.o: kandyDomain.h
 
 CMakeFiles/KandyClient.dir/main.cpp.o: httpClient.h
-CMakeFiles/KandyClient.dir/main.cpp.o: kandyClient.h
+CMakeFiles/KandyClient.dir/main.cpp.o: kandyAccount.h
+CMakeFiles/KandyClient.dir/main.cpp.o: kandyDomain.h
 CMakeFiles/KandyClient.dir/main.cpp.o: main.cpp
 

@@ -24,17 +24,31 @@ curl/curl.h
 jsoncpp/json/json.h
 -
 
-/home/pi/KandyIO/kandyClient.cpp
-kandyClient.h
-/home/pi/KandyIO/kandyClient.h
+/home/pi/KandyIO/kandyAccount.cpp
+kandyAccount.h
+/home/pi/KandyIO/kandyAccount.h
 
-/home/pi/KandyIO/kandyClient.h
+/home/pi/KandyIO/kandyAccount.h
 list
+-
+httpClient.h
+/home/pi/KandyIO/httpClient.h
+kandyDomain.h
+/home/pi/KandyIO/kandyDomain.h
+
+/home/pi/KandyIO/kandyDomain.cpp
+kandyDomain.h
+/home/pi/KandyIO/kandyDomain.h
+
+/home/pi/KandyIO/kandyDomain.h
+string
 -
 httpClient.h
 /home/pi/KandyIO/httpClient.h
 
 /home/pi/KandyIO/main.cpp
-kandyClient.h
-/home/pi/KandyIO/kandyClient.h
+kandyAccount.h
+/home/pi/KandyIO/kandyAccount.h
+kandyDomain.h
+/home/pi/KandyIO/kandyDomain.h
 
