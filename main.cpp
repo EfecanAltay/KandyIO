@@ -1,7 +1,7 @@
 #include "kandyClient.h"
 
-string apiKey="DAK8d4953ad50b645cabca174f794792d7a";
-string apiSecretKey="DAS8e5d1a3cdd104c03960b4ff0ea34c4c1";
+string apiKey="AAK15fd135fbc9f448889f5dea46fd1687b";
+string apiSecretKey="AASed864b1c7a8a42628d03c0c616e4e753";
 
 int main(){
 	KandyClient kandyClient(apiKey,apiSecretKey);
